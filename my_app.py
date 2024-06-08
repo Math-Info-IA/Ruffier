@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import (
        QPushButton, QLabel, QListWidget, QLineEdit)
 
 
-from instr import *
+from intsr import *
 from second_win import *
      
 class MainWin(QWidget):
