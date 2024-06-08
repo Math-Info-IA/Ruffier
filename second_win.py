@@ -9,6 +9,7 @@ from PyQt5.QtWidgets import (
 from instr import *
 from final_win import *
 
+
 class TestWin(QWidget):
     def __init__(self):
         ''' the window in which the survey is being conducted '''
