@@ -4,10 +4,11 @@ from PyQt5.QtWidgets import (
         QHBoxLayout, QVBoxLayout, QGridLayout, 
         QGroupBox, QRadioButton,
         QPushButton, QLabel, QListWidget, QLineEdit)
-        
+       
 from instruction import *
 
 class FinalWin(QWidget):
+
        def __init__(self):
               super().__init__()
 
