@@ -5,12 +5,12 @@ from PyQt5.QtWidgets import (
         QGroupBox, QRadioButton,
         QPushButton, QLabel, QListWidget, QLineEdit)
         
-from instr import *
+from instruction import *
 
 class FinalWin(QWidget):
        def __init__(self):
               super().__init__()
-              
+
               self.initUI()
               self.set_appear()
               self.show()

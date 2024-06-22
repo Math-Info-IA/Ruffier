@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import (
         QGroupBox, QRadioButton,
         QPushButton, QLabel, QListWidget, QLineEdit)
 
-from instr import *
+from instruction import *
 from second_win import *
 
        
@@ -21,10 +21,24 @@ class MainWin(QWidget):
         self.show()
 
     def initUI(self):
-        self.btn_next = QPushButton(txt_next, self)
         self.hello_text = QLabel(txt_hello)
         self.instruction = QLabel(txt_instruction)
-
+        self.btn_next = QPushButton(txt_next, self)
+        self.btn_next.setStyleSheet("""
+                    QPushButton {   background-color: #3498db; 
+                                    color: white; 
+                                    font-size: 30px;
+                                    border-radius:20px;
+                                    padding: 15px 50px;
+                                }
+                    QPushButton:hover { color: blue;
+                                        background-color: gray;}
+                                        
+                    QPushButton:pressed {  
+                                    color: black;
+                                    background-color : red;  
+                                            }
+                    """)             
         self.layout_line = QVBoxLayout()
         self.layout_line.addWidget(self.hello_text, alignment = Qt.AlignLeft)
         self.layout_line.addWidget(self.instruction, alignment = Qt.AlignLeft) 
