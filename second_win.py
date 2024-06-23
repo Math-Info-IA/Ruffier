@@ -10,6 +10,13 @@ from PyQt5.QtWidgets import (
 from instruction import *
 from final_win import *
 
+class Experiment():
+       def __init__(self, age, test1, test2, test3):
+              self.age = age
+              self.t1 = test1
+              self.t2 = test2
+              self.t3 = test3
+
 class TestWin(QWidget):
        def __init__(self):
               super().__init__()
@@ -20,9 +27,9 @@ class TestWin(QWidget):
               self.show()
        
        def next_click(self):
-              self.tw = TestWin()
               self.hide()
-
+              self.exp = Experiment(self.line_age.text(), self.line_test1.text(), self.line_test2.text(), self.line_test3.text())
+              self.tw = FinalWin(self.exp)
        def connects(self):
               self.btn_next.clicked.connect(self.next_click)
 
@@ -78,9 +85,6 @@ class TestWin(QWidget):
               self.h_line.addLayout(self.r_line)        
               self.setLayout(self.h_line)
        
-       def next_click(self):
-              self.hide()
-              self.fw = FinalWin()
 
        def connects(self):
               self.btn_next.clicked.connect(self.next_click)
@@ -150,4 +154,10 @@ class TestWin(QWidget):
               self.btn_test1.clicked.connect(self.timer_test)
               self.btn_test2.clicked.connect(self.timer_sits)
               self.btn_test3.clicked.connect(self.timer_final)
-
+       def results(self):
+              self.index = (4*(int(self.exp.t1)+int(self.exp.t2)+int(self.exp.t3))-200)/10
+              if self.exp.age >= 15:
+                     if self.index >= 15:
+                            return txt_res1
+                     elif self.index < 15 and self.index >= 11 :
+                            return txt_res2
