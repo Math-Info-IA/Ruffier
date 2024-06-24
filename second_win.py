@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import (
         QPushButton, QLabel, QListWidget, QLineEdit)
 
 from instruction import *
+
 from final_win import *
 class Experiment():
    def __init__(self, age, test1, test2, test3):
@@ -15,7 +16,7 @@ class Experiment():
        self.t1 = test1
        self.t2 = test2
        self.t3 = test3
-       
+
 class TestWin(QWidget):
        def __init__(self):
               super().__init__()
