@@ -8,7 +8,14 @@ from PyQt5.QtWidgets import (
         QPushButton, QLabel, QListWidget, QLineEdit)
 
 from instruction import *
+
 from final_win import *
+class Experiment():
+   def __init__(self, age, test1, test2, test3):
+       self.age = age
+       self.t1 = test1
+       self.t2 = test2
+       self.t3 = test3
 
 class Experiment():
        def __init__(self, age, test1, test2, test3):
@@ -85,6 +92,13 @@ class TestWin(QWidget):
               self.h_line.addLayout(self.r_line)        
               self.setLayout(self.h_line)
        
+<<<<<<< HEAD
+       def next_click(self):
+              self.hide()
+              self.exp = Experiment(int(self.line_age.text()), self.line_test1.text(), self.line_test2.text(), self.line_test2.text())
+              self.fw = FinalWin(self.exp)
+=======
+>>>>>>> fd52b8171d9702d5935232c7ac6e84e80820720e
 
        def connects(self):
               self.btn_next.clicked.connect(self.next_click)
