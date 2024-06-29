@@ -61,4 +61,49 @@ class FinalWin(QWidget):
                             return txt_res4
                      else:
                             return txt_res5
+              elif self.exp.age <= 14 and self.exp.age >= 13 :
+                     if self.index >= 16.5:
+                            return txt_res1
+                     elif self.index < 16.4 and self.index >= 12.5:
+                            return txt_res2
+                     elif self.index < 12.4 and self.index >= 7.5:
+                            return txt_res3
+                     elif self.index < 7.4 and self.index >= 2:
+                            return txt_res4
+                     else:
+                            return txt_res5
+              elif self.exp.age <= 12 and self.exp.age >= 11 :
+                     if self.index >= 18:
+                            return txt_res1
+                     elif self.index < 17.9 and self.index >= 14:
+                            return txt_res2
+                     elif self.index < 13.9 and self.index >= 9:
+                            return txt_res3
+                     elif self.index < 8.9 and self.index >=3.5:
+                            return txt_res4
+                     else:
+                            return txt_res5
+              elif self.exp.age <= 10 and self.exp.age >= 9 :
+                     if self.index >= 19.5:
+                            return txt_res1
+                     elif self.index < 19.4 and self.index >= 15.5:
+                            return txt_res2
+                     elif self.index < 15.4 and self.index >= 10.5:
+                            return txt_res3
+                     elif self.index < 10.4 and self.index >= 5:
+                            return txt_res4
+                     else:
+                            return txt_res5
+
+              elif self.exp.age <= 8 and self.exp.age >= 7 :
+                     if self.index >= 21:
+                            return txt_res1
+                     elif self.index < 20.9 and self.index >= 17:
+                            return txt_res2
+                     elif self.index < 16.9 and self.index >= 12:
+                            return txt_res3
+                     elif self.index < 11.9 and self.index >= 6.5:
+                            return txt_res4
+                     else:
+                            return txt_res5
 
